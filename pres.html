@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <section data-markdown>
+                    # Kritika.IO
+
+                    MadPerl 2017
+
+                    vti
+                </section>
+
+                <section data-markdown>
+                    # ABOUT ME
+                </section>
+
+                <section data-markdown>
+                    # 2008
+                </section>
+
+                <section>
+                    <img data-src="img/metacpan.png" />
+                </section>
+
+                <section>
+                    Protocol::WebSocket, PocketIO/SockJS, Routes::Tiny, Text::Haml, UnderscoreJS and others...
+                </section>
+
+                <section>
+                    showmetheco.de
+                    <img data-src="img/showmethecode.png" />
+                </section>
+
+                <section>
+                    <img data-src="img/github.png" />
+                </section>
+
+                <section data-markdown>
+                    # 2012
+                </section>
+
+                <section>
+                    <img data-src="img/perltuts.png" />
+                </section>
+
+                <section>
+                    <img data-src="img/alex.png" />
+                </section>
+
+                <section data-markdown>
+                    # 2013
+                </section>
+
+                <section>
+                    <img data-src="img/pragmaticperl.png" />
+                </section>
+
+                <section>
+                    <img data-src="img/yapc-eu.png" />
+                </section>
+
+                <section data-markdown>
+                    # Today
+                </section>
+
+                <section>
+                    <img data-src="img/kritika.png" />
+                </section>
+
+                <section data-markdown>
+                    # Pre history
+                </section>
+
+                <section>
+                    New Job:
+                    <p class="fragment">Technical Debt</p>
+                    <p class="fragment">No Tests</p>
+                    <p class="fragment">No Automation</p>
+                    <p class="fragment">No Standards/Best Practices/etc</p>
+                    <p class="fragment">Developers of different levels</p>
+                </section>
+
+                <section>
+                    <img data-src="img/fuuuuck.jpg" />
+                </section>
+
+                <section data-markdown>
+                    # Fix it
+                </section>
+
+                <section>
+                    My responsibility:
+                    <p class="fragment">Code Review</p>
+                    <p class="fragment">Testing</p>
+                    <p class="fragment">Refactoring</p>
+                    <p class="fragment">Mentoring</p>
+                </section>
+
+                <section>
+                    Team responsibility:
+                    <p class="fragment">Learn</p>
+                    <p class="fragment">Practice</p>
+                    <p class="fragment">Learn</p>
+                    <p class="fragment">Practice</p>
+                    <p class="fragment">...</p>
+                </section>
+
+                <section data-markdown>
+                    Result?
+                </section>
+
+                <section>
+                    <img data-src="img/fuckyou.jpg" />
+                </section>
+
+                <section data-markdown>
+                    Real solution is...
+                </section>
+
+                <section>
+                    CONTROL<br />
+                    <img data-src="img/stalin.jpg" />
+                </section>
+
+                <section data-markdown>
+                    # Enforce Best Practices
+                </section>
+
+                <section>
+                    What's wrong with Perl::Critic?
+                    <p class="fragment">Slow on big codebase</p>
+                    <p class="fragment">Perl-specific</p>
+                    <p class="fragment">Local setup</p>
+                    <p class="fragment">No history</p>
+                    <p class="fragment">Static analysis not enough</p>
+                </section>
+
+                <section>
+                    <span style="color:#999">https://</span>kritika.io
+                    <p class="fragment">Started as Enterprise</p>
+                    <p class="fragment">Personal GitHub projects</p>
+                    <p class="fragment">Let everybody enjoy it</p>
+                </section>
+
+                <section>
+                    Main Features:
+                    <p class="fragment">Incremental Analysis</p>
+                    <p class="fragment">Unified way to check all project technologies</p>
+                    <p class="fragment">Saves progress over time</p>
+                    <p class="fragment">Single point of configuration</p>
+                    <p class="fragment">Shareable results</p>
+                    <p class="fragment">Custom programmable analysis</p>
+                </section>
+
+                <section>
+                    <img data-src="img/enough.jpg" />
+                </section>
+
+                <section>
+                    What's inside?
+                    <p class="fragment">Moo</p>
+                    <p class="fragment">PostgreSQL on ObjectDB</p>
+                    <p class="fragment">Plack/PSGI on Tu on top of Gazelle</p>
+                    <p class="fragment">AnyEvent with Plack::App::EventSource</p>
+                </section>
+
+                <section>
+                    Custom rules: JavaScript/Duktape
+                    <pre>
+                    <code>
+kritika.forEachModifiedFile(function(file) {
+    if (/[A-Z]/.test(file.basename)) {
+        kritika.addViolation(file, {
+            message: 'Uppercase in names is forbidden!'
+        });
+    }
+
+    if (/# TODO/.test(file.slurp())) {
+        kritika.addViolation(file, {
+            message: 'TODOs are forbidden!'
+        });
+    }
+});</code>
+                    </pre>
+                </section>
+
+                <section>
+                    Integrations:
+                    <p class="fragment">Editors</p>
+                    <p class="fragment">Command line / Hooks</p>
+                </section>
+
+                <section>
+                    What's next?
+                    <p class="fragment">More profiles and rules</p>
+                    <p class="fragment">More languages</p>
+                    <p class="fragment">More integrations (GitLab, BitBucket...)</p>
+                    <p class="fragment">Private repos and Enterprise version</p>
+                </section>
+
+                <section data-markdown>
+                    # THANK YOU
+
+                    # Q&amp;A?
+                </section>
+
+
+            </div>
+        </div>
+        <script src="js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                history: true,
+                dependencies: [
+
+                    // Interpret Markdown in <section> elements
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                    // Syntax highlight for <code> elements
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+        </script>
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </body>
+</html>
