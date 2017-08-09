@@ -49,6 +49,10 @@
                 </section>
 
                 <section>
+                    <img data-src="img/perltuts6.png" />
+                </section>
+
+                <section>
                     <img data-src="img/alex.png" />
                 </section>
 
@@ -141,6 +145,7 @@
                 </section>
 
                 <section>
+                    What do we want?
                     <p class="fragment">Static Code analysis</p>
                     <p class="fragment">Code complexity</p>
                     <p class="fragment">Test coverage</p>
@@ -152,19 +157,19 @@
 
                 <section>
                     <span style="color:#999">https://</span>kritika.io
-                    <p class="fragment">Started as Enterprise</p>
+                    <p class="fragment">Started as in-house bash/perl/everything script</p>
                     <p class="fragment">Personal GitHub projects</p>
                     <p class="fragment">Let everybody enjoy it</p>
                 </section>
 
                 <section>
                     Main Features:
-                    <p class="fragment">Incremental Analysis</p>
+                    <p class="fragment">Incremental Analysis (fast)</p>
                     <p class="fragment">Unified way to check all project technologies (Perl, JavaScript, Markdown etc)</p>
-                    <p class="fragment">Saves progress over time</p>
-                    <p class="fragment">Single point of configuration</p>
-                    <p class="fragment">Shareable results</p>
-                    <p class="fragment">Custom programmable analysis</p>
+                    <p class="fragment">Saves progress over time (blame)</p>
+                    <p class="fragment">Single point of configuration (works on my machine)</p>
+                    <p class="fragment">Shareable results (blame)</p>
+                    <p class="fragment">Custom programmable analysis (advanced blame)</p>
                 </section>
 
                 <section>
@@ -172,31 +177,25 @@
                 </section>
 
                 <section>
-                    What's inside?
-                    <p class="fragment">Moo</p>
-                    <p class="fragment">PostgreSQL on ObjectDB</p>
-                    <p class="fragment">Plack/PSGI on Tu on top of Gazelle</p>
-                    <p class="fragment">AnyEvent with Plack::App::EventSource</p>
+                    <p class="fragment">1. Repo import</p>
+                    <p class="fragment">2. Smart defaults (scripts, packages, builds)</p>
+                    <p class="fragment">3. Rule customizations through profiles</p>
+                    <p class="fragment">4. History and diffs</p>
+                </section>
+
+                <section data-markdown>
+                    # Use Case
+                    - Catalyst
+                    - Mojolicious
+                    - Dancer/Dancer2
                 </section>
 
                 <section>
-                    Custom rules: JavaScript/Duktape
-                    <pre>
-                    <code>
-kritika.forEachModifiedFile(function(file) {
-    if (/[A-Z]/.test(file.basename)) {
-        kritika.addViolation(file, {
-            message: 'Uppercase in names is forbidden!'
-        });
-    }
-
-    if (/# TODO/.test(file.slurp())) {
-        kritika.addViolation(file, {
-            message: 'TODOs are forbidden!'
-        });
-    }
-});</code>
-                    </pre>
+                    What's inside?
+                    <p class="fragment">Moo</p>
+                    <p class="fragment">PostgreSQL</p>
+                    <p class="fragment">Plack/PSGI on top of Gazelle</p>
+                    <p class="fragment">AnyEvent with Plack::App::EventSource for events</p>
                 </section>
 
                 <section>
@@ -208,9 +207,9 @@ kritika.forEachModifiedFile(function(file) {
                 <section>
                     What's next?
                     <p class="fragment">More profiles and rules</p>
-                    <p class="fragment">More languages</p>
+                    <p class="fragment">More languages (Perl, JavaScript, C, Bash, Markdown)</p>
                     <p class="fragment">More integrations (GitLab, BitBucket...)</p>
-                    <p class="fragment">Private repos and Enterprise version</p>
+                    <p class="fragment">Feedback welcome!</p>
                 </section>
 
                 <section data-markdown>
