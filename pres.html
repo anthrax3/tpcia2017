@@ -136,6 +136,10 @@
                 </section>
 
                 <section>
+                    Can we just write bash/perl/whatever script using perlcritic/eslint/whatever?
+                </section>
+
+                <section>
                     What's wrong with Perl::Critic?
                     <p class="fragment">Slow on big codebase</p>
                     <p class="fragment">Perl-specific</p>
@@ -146,12 +150,12 @@
 
                 <section>
                     What do we want?
-                    <p class="fragment">Static Code analysis</p>
-                    <p class="fragment">Code complexity</p>
-                    <p class="fragment">Test coverage</p>
+                    <p class="fragment">Static Code Analysis</p>
+                    <p class="fragment">Code Complexity</p>
+                    <p class="fragment">Test Coverage</p>
                     <p class="fragment">Formatting</p>
-                    <p class="fragment">Duplication detection</p>
-                    <p class="fragment">Custom domain rules</p>
+                    <p class="fragment">Duplication Detection</p>
+                    <p class="fragment">Custom Domain Rules</p>
                     <p class="fragment">Consistency</p>
                 </section>
 
@@ -192,8 +196,10 @@
 
                 <section>
                     What's inside?
-                    <p class="fragment">Moo</p>
                     <p class="fragment">PostgreSQL</p>
+                    <p class="fragment">Moo</p>
+                    <p class="fragment">PPI/Regex/Hacks for Perl AST</p>
+                    <p class="fragment">Marpa for other ASTs</p>
                     <p class="fragment">Plack/PSGI on top of Gazelle</p>
                     <p class="fragment">AnyEvent with Plack::App::EventSource for events</p>
                 </section>
